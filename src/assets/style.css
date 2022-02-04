@@ -1,0 +1,723 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 20px;
+}
+
+::selection{
+    background-color: black;
+    color:  #fff;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #fff;
+    font-family: 'Kanit', sans-serif;
+    color: black;
+}
+
+/*          Scrollbar         */
+body::-webkit-scrollbar {
+    width: 8px;               
+}
+  
+body::-webkit-scrollbar-track {
+    background: white;        
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: black;   
+    border-radius: 20px;      
+}
+
+/*        Float              */
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+/*
+    AUTHOR: Bakos János
+
+    Fade in:
+    - ha beszeretnel valamit fade-elni, akkor megadod
+      class nevnek hogy: .fade-in
+
+    - ha kerdesed van fordulj az Authorhoz!
+*/
+
+.fade-in{
+    opacity: 0;
+    transition: opacity 0.7s ease-in;
+}
+
+.fade-in.appear{
+    opacity: 1;
+}
+
+/*            Main CSS             */
+.section1{
+    width: 100%;
+    min-height: 1100px;
+    background-image: url(./Photos/background-opt.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: auto;  
+}
+
+.section1 img{
+    padding-top: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    /* animation: float 3s ease-in-out infinite; */
+}
+
+.section2{
+    height: auto;
+    min-height: 1300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.section2 h1{
+    font-size: 5em;
+}
+
+.sor{
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin:5px;
+    display: flex;
+    align-items: center;
+}
+
+.sor-2{
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    padding-top: 150px;
+}
+
+.leiras{
+    min-width: 500px;
+    width: 20%;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.leiras-icon{
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.leiras-icon i{
+    font-size: 2em;
+}
+
+.leiras-test{
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.oszlop{
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.section3{
+    margin-top: 5px;
+    width: 100%;
+    min-height: 300px;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75) ),
+                     url(./Photos/background2.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.section3 h1{
+    padding:20px;
+    color: #fff;
+    font-size: 3.5em;
+}
+
+.idezet{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.section4{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: auto;  
+    min-height: 1300px; 
+}
+
+.sor2{
+    height: auto;
+    margin: 5px;
+    padding: 10px;
+    gap: 30px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.oszlop2{
+    height: auto;
+    width: 40%;
+    min-width: 500px;
+    text-align: center;
+    padding:10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+}
+
+.oszlop2 button{
+    border-radius: 5px;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    transition: all .4s ease-in-out;
+}
+
+.oszlop2 button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.middle-align{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.floating-img{
+    width: 70%;
+    animation: float 3s ease-in-out infinite;
+}
+
+.section5{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75) ),
+                     url(./Photos/background3-opt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: auto;  
+    min-height: 1300px; 
+}
+
+.sor3-1{
+    margin: 5px;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.sor3-1 h1{
+    font-size: 5em;
+}
+
+.sor3-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.csapat-tag{
+    width: 20%;
+    margin-bottom: 50px;
+    padding: 60px;
+    margin: 10px;
+    min-width: 250px;
+}
+
+.csapat-img{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.csapat-img img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: solid #fff 2px;
+}
+
+.csapat-leiras{
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 1em;
+    color: #fff;
+}
+
+.csapat-leiras h3{
+    font-size: 1.5em;
+}
+
+footer{
+    width: 100%;
+    height: auto;  
+    min-height: 1300px; 
+}
+
+footer h1{
+    font-size: 5em;
+    padding-bottom: 100px;
+}
+
+.kapcsolat button{
+    border-radius: 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    font-size: 2em;
+    transition: all .4s ease-in-out;
+}
+
+.kapcsolat button:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.sor4{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    margin: 10px;
+    height: auto;  
+    min-height: 650px; 
+}
+
+.sor4:last-child{
+    padding:10px;
+}
+
+.kapcsolat{
+    text-align: center;
+    padding-top: 200px;
+}
+
+.oszlop4{
+    width: 20%;
+    min-width: 350px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    gap: 50px;
+}
+
+.infobox{
+    padding-top: 75px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 20px;
+
+    color: #fff;
+    background-color: black;
+    width: 350px !important;
+    height: 300px !important;
+    border-bottom: solid 5px #fff;
+    box-shadow: 5px 5px 10px 0px black;
+}
+
+.infobox p{
+    padding-top: 5px;
+}
+
+.separator{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 30px;
+    height: 2px;
+    display: block;
+    margin:auto;
+    background-color: #fff;
+}
+
+.fb{
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+
+.fb::after{
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in;
+}
+
+.fb:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.fb:visited{
+    text-decoration: none;
+    color: #fff;
+}
+
+.fb:hover{
+    text-decoration: none;
+}
+
+.fb:focus{
+    text-decoration: none;
+}
+
+.copyright{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 2em;
+}
+
+.copyright p{
+    padding-left: 5px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+/*          1366                */
+@media all and (max-width: 1366px){
+    .section1 img{
+        width: 50%;
+    }
+}
+
+/*          800                */
+@media all and (max-width: 800px){
+    .section2 h1{
+        font-size: 4em;
+    }
+}
+
+/*          600                */
+@media all and (max-width: 600px){
+    .section1 img{
+        width: 80%;
+    }
+    
+    .section3{
+        background-attachment: unset;
+    }
+
+    .section5{
+        background-attachment: unset;
+    }
+}
+
+/*          428                */
+@media all and (max-width: 428px){
+    .sor{
+        padding: 20px;
+        padding-top: 50px;
+    }
+
+    .sor-2{
+        padding-top: 100px;
+    }
+
+    .section2 h1{
+        font-size: 3em;
+    }
+    
+    .leiras{
+        min-width: 400px;
+    }
+
+    .oszlop2{
+        min-width: 370px;
+        font-size: 1.5em;
+    }
+
+    footer h1{
+        font-size: 3em;
+    }
+
+    .sor3-1{
+        padding-top: 40px;
+    }
+    
+    .section3{
+        background-attachment: unset;
+    }
+
+    .section5{
+        background-attachment: unset;
+    }
+}
+
+/*          414                */
+@media all and (max-width: 414px) {
+    .sor{
+        padding: 20px;
+        padding-top: 50px;
+    }
+
+    .sor-2{
+        padding-top: 100px;
+    }
+
+    .section2 h1{
+        font-size: 3em;
+    }
+    
+    .leiras{
+        min-width: 400px;
+    }
+
+    .oszlop2{
+        min-width: 370px;
+        font-size: 1.5em;
+    }
+
+    footer h1{
+        font-size: 3em;
+    }
+
+    .sor3-1{
+        padding-top: 40px;
+    }
+    
+    .section3{
+        background-attachment: unset;
+    }
+
+    .section5{
+        background-attachment: unset;
+    }
+}
+
+/*          411                */
+@media all and (max-width: 411px) {
+    .leiras{
+        min-width: 400px;
+    }
+
+    .oszlop2{
+        min-width: 370px;
+    }
+    
+    .section3{
+        background-attachment: unset;
+    }
+
+    .section5{
+        background-attachment: unset;
+    }
+}
+
+/*          390                */
+@media all and (max-width: 390px){
+    .leiras{
+        min-width: 350px;
+    }
+
+    .section2 h1{
+        font-size: 2.5em;
+    }
+
+    .section3{
+        background-attachment: unset;
+    }
+
+    .section5{
+        background-attachment: unset;
+    }
+}
+
+/*          384                */
+@media all and (max-width: 384px) {
+    .leiras{
+        min-width: 350px;
+    }
+
+    .oszlop2{
+        min-width: 300px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .sor2{
+        gap: 80px;
+    }
+
+    .floating-img{
+        width: 80%;
+    }
+
+    .section2 h1{
+        font-size: 2.5em;
+    }
+
+    .leiras-test{
+        font-size: 1.5em;
+    }
+
+    .section3 h1{
+        font-size: 2.5em;
+    }
+
+    .copyright{
+        font-size: 1.5em;
+    }
+    
+    .section3{
+        background-attachment: unset;
+    }
+
+    .section5{
+        background-attachment: unset;
+    }
+}
+
+/*          360                */
+@media all and (max-width: 360px) {
+    .leiras{
+        min-width: 300px;
+    }
+
+    .oszlop2{
+        min-width: 270px;
+    }
+
+    .sor4{
+        margin: 0;
+    }
+
+    .oszlop4{
+        font-size: 1.5em;
+    }
+
+    .infobox{
+        padding-top: 50px;
+        height: 250px !important;
+        width: 300px !important;
+    }
+
+    .copyright{
+        font-size: 1.5em;
+    }
+    
+    .section3{
+        background-attachment: unset;
+    }
+
+    .section5{
+        background-attachment: unset;
+    }
+}
+
+/*          320                */
+@media all and (max-width: 320px) {
+    .leiras{
+        min-width: 300px;
+    }
+
+    .oszlop2{
+        min-width: 270px;
+    }
+
+    .sor4{
+        margin: 0;
+    }
+
+    .oszlop4{
+        font-size: 1.5em;
+        min-width: 300px;
+    }
+
+    .infobox{
+        padding-top: 25px;
+        height: 200px !important;
+        width: 250px !important;
+    }
+
+    .csapat-tag{
+        min-width: 300px;
+    }
+
+    .copyright{
+        font-size: 1.5em;
+    }
+
+    .section2 h1{
+        font-size: 2em;
+    }
+
+    .oszlop2{
+        font-size: 1.25em;
+    }
+    
+    .section3{
+        background-attachment: unset;
+    }
+
+    .section5{
+        background-attachment: unset;
+    }
+}
