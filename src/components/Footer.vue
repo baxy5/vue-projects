@@ -3,7 +3,7 @@
         <div class="sor4 fade-in">
             <div class="kapcsolat">
                 <h1>Vedd fel velünk a kapcsolatot!</h1>
-                <a href="./Contact-Us/contactus.php"><button> Üzenetküldés</button></a>
+                <router-link :to="{name: 'Contact'}"><button>Üzenetküldés</button></router-link>
             </div>
         </div>
         <div class="sor4">

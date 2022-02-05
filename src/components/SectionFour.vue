@@ -13,8 +13,7 @@
                 </p>
             </div>
             <div class="oszlop2  fade-in">
-                <a href=""><button>Írj nekünk!</button></a>
-                <!-- <router-link :to="{name: 'Contact'}">Hey</router-link> -->
+                <router-link :to="{name: 'Contact'}"><button>Írj nekünk!</button></router-link>
             </div>
         </div>
     </section>
