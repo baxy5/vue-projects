@@ -1,17 +1,21 @@
 <template>
   <div class="container">
-    <Input/>
-    <Weather/>
+    <input type="text" placeholder="Search for..." v-model="query">
+    <WeatherUI :query="query" />
   </div> 
 </template>
 
 <script>
-import Input from './components/Input.vue'
-import Weather from './components/Weather.vue'
+import WeatherUI from './components/WeatherUI.vue'
 
 export default {
   name: 'App',
-  components: {Input, Weather}
+  components: {WeatherUI},
+  data(){
+    return {
+      query: '',
+    }
+  }
 }
 </script>
 
