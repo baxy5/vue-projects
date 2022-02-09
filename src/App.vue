@@ -1,16 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>My tasks:</h1>
+  <div class="tasks-container">
+    <AddTask/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AddTask from './components/AddTask.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {AddTask}
 }
 </script>
 
@@ -22,5 +22,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.tasks-container{
+  display: inline-block;
+  border: 2px solid #2c3e50;
+  min-width: 400px;
+  border-radius: 5px;
 }
 </style>
