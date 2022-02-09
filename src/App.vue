@@ -25,7 +25,6 @@ export default {
 }
 .tasks-container{
   display: inline-block;
-  border: 2px solid #2c3e50;
   min-width: 400px;
   border-radius: 5px;
 }
