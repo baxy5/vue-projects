@@ -1,19 +1,7 @@
-# vue-bootstrap
+#Setup:
+## npm install bootstrap
+## npm install @popperjs/core
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#Main.js:
+##import 'bootstrap/dist/css/bootstrap.css'
+##import 'bootstrap/dist/js/bootstrap.js'
