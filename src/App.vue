@@ -1,10 +1,20 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <Navbar />
+  <FancyBtn> Surpass your limits right here, right now! </FancyBtn>
+  <router-view />
 </template>
+
+<script>
+import Navbar from "./components/Navbar.vue";
+import FancyBtn from "./components/FancyBtn.vue";
+
+export default {
+  components: {
+    Navbar,
+    FancyBtn,
+  },
+};
+</script>
 
 <style>
 #app {
