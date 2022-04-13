@@ -18,14 +18,14 @@
 
   <div class="container">
     <form>
-      <input type="text" placeholder="Name" v-model="name"/>
+      <input type="text" placeholder="Name" v-model="name" />
       <br />
-      <input type="text" placeholder="Email" v-model="email"/>
+      <input type="text" placeholder="Email" v-model="email" />
       <p class="email-validation-error" v-show="validation">
         Please give me a real email address you dumb bitch!
       </p>
       <br />
-      <input type="password" placeholder="Password" v-model="password"/>
+      <input type="password" placeholder="Password" v-model="password" />
       <br />
       <input type="submit" value="Sign up" @click="fetchData" />
     </form>
@@ -87,7 +87,7 @@ export default {
     fetchData() {
       if (!this.email.includes("@")) {
         this.validation = true;
-      }else{
+      } else {
         // sending data to the database
       }
     },

@@ -1,17 +1,22 @@
 <template>
   <Navbar />
-  <FancyBtn> Surpass your limits right here, right now! </FancyBtn>
+  <!-- <FancyBtn> Surpass your limits right here, right now! </FancyBtn> -->
+  <EnlargeImage
+    src="https://dane-iracleous-portfolio.s3-us-west-2.amazonaws.com/stock/demo1_small.jpg"
+  />
   <router-view />
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue";
 import FancyBtn from "./components/FancyBtn.vue";
+import EnlargeImage from "./components/enlarge-image.vue";
 
 export default {
   components: {
     Navbar,
     FancyBtn,
+    EnlargeImage,
   },
 };
 </script>
