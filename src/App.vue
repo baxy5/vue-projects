@@ -1,9 +1,11 @@
 <template>
   <Navbar />
   <!-- <FancyBtn> Surpass your limits right here, right now! </FancyBtn> -->
-  <EnlargeImage
-    src="https://dane-iracleous-portfolio.s3-us-west-2.amazonaws.com/stock/demo1_small.jpg"
-  />
+  <div class="image-container">
+    <EnlargeImage
+      src="https://dane-iracleous-portfolio.s3-us-west-2.amazonaws.com/stock/demo1_small.jpg"
+    />
+  </div>
   <router-view />
 </template>
 
@@ -41,5 +43,8 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+.image-container {
+  display: flex;
 }
 </style>

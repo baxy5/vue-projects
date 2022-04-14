@@ -36,6 +36,8 @@
     <p>Email: {{ this.email }}</p>
     <p>Password: {{ this.password }}</p>
   </div>
+
+  <div class="blank"></div>
 </template>
 
 <script>
@@ -96,6 +98,9 @@ export default {
 </script>
 
 <style scoped>
+.blank {
+  height: 100vh;
+}
 .enlarge-image {
   cursor: pointer;
 }

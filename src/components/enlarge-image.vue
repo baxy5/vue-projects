@@ -17,26 +17,24 @@ export default {
     return {
       state: this.state,
       style: this.style,
-      /* enlargedImgContainer: this.enlargedImgContainer, */
       isLarge: false,
     };
   },
   methods: {
     enlarge() {
       let self = this;
+      let rect = self.$refs.slot.getBoundingClientRect();
       self.transition_value = "width " + 0.3 + "s" + ", height " + 0.3 + "s";
+      self.adjust_top = 0;
+
       self.style = {
         position: "fixed",
-        height: "400px",
+        height: "600px",
         width: "500px",
         transition: self.transition_value,
-      };
-      /* self.enlargedImgContainer = {
-        position: "fixed",
-        height: "100%",
-        width: "100%",
         "z-index": "99",
-      }; */
+      };
+
       this.isLarge = true;
     },
     reset() {
@@ -46,8 +44,10 @@ export default {
         position: "relative",
         width: "150px",
         height: "150px",
-        transition: self.transition_value,
+        "z-index": "1",
+        /* transition: self.transition_value, */
       };
+
       this.isLarge = false;
     },
   },
@@ -55,8 +55,8 @@ export default {
 </script>
 
 <template>
-  <div>
-    <div class="slot" ref="slot" :style="this.enlargedImgContainer">
+  <div :class="{ 'enlargeable-image': isLarge }">
+    <div class="slot" ref="slot">
       <slot>
         <img
           :src="this.$props.src"
@@ -68,11 +68,32 @@ export default {
       </slot>
     </div>
   </div>
+  <div>
+    <img
+      :src="this.$props.src"
+      :width="this.$props.width"
+      :height="this.$props.height"
+      v-show="isLarge"
+    />
+  </div>
 </template>
 
 <style scoped>
+.enlargeable-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.499);
+  margin: 0;
+  left: 0;
+  top: 0;
+}
 .slot {
   display: flex;
   justify-content: space-around;
+  cursor: zoom-in;
+}
+.opened-image {
+  overflow: hidden;
 }
 </style>
