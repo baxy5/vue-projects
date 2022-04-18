@@ -1,0 +1,39 @@
+<template>
+  <button class="btn">
+    <slot> </slot>
+  </button>
+</template>
+
+<style scoped>
+.btn {
+  text-decoration: none;
+  padding: 5px;
+  border: 2px solid rgb(146, 148, 248);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(146, 148, 248, 0.4),
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.btn:hover:before {
+  left: 100%;
+}
+</style>
